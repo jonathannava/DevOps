@@ -30,6 +30,6 @@ jobs:
         working-directory: ./capstone_project/hello-world/
 
 
-      #- name: Build Docker image
-      #  if: ${{ success() }}
-      #  run: docker build -t hello-world .
+      - name: Build Docker image
+        if: ${{ success() }}
+        run: docker build -t hello-world .
