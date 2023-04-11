@@ -32,4 +32,4 @@ jobs:
 
       - name: Build Docker image
         if: ${{ success() }}
-        run: docker build -t hello-world .
+        run: docker build -t hello-world /capstone_project/hello-world/Dockerfile
