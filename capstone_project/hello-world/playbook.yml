@@ -1,0 +1,7 @@
+- name: Cambiar texto en archivo App.js dentro de un contenedor Docker
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Ejecutar comando sed dentro del contenedor Docker
+      shell: docker exec hello-world sed -i 's/Hello World!/Hello DevOps!/g' /app/src/App.js
