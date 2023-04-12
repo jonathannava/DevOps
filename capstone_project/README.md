@@ -15,6 +15,61 @@
 ## Description
 In this project, you will be using some of the tools and technologies you have learned during the bootcamp.
 
+## Containerizing an Application with Docker
+
+The first step would be to identify the application to be containerized and prepare its environment, including installing all necessary dependencies and libraries. A Dockerfile would then be created, defining the container's configuration, including the base image, software dependencies (package), and any necessary settings.
+
+[Dockerfile](https://github.com/jonathannava/DevOps/blob/main/capstone_project/hello-world/Dockerfile)
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/7119224/231537588-c170edfa-fefe-4912-a77b-be620795a257.png"  width="20%">
+</p>
+Once the Dockerfile is complete, the container can be built using Docker commands. After building the container, it can be run on a Docker engine, and the application can be accessed through the localhost.
+Built using Docker
+<p align="center">
+<img src="https://user-images.githubusercontent.com/7119224/231540890-3796a8b3-eac0-4eee-9061-02b3d130aef2.png" width="80%">
+</p>
+Run a Docker container
+<p align="center">
+<img src="https://user-images.githubusercontent.com/7119224/231541687-22e8ab4e-76e8-4527-a337-a5cdee82f7dd.png" width="80%">
+</p>
+Aplication running (localhost:3000)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/7119224/231542674-2edc992f-40f4-4338-9c93-28ea1e455f8a.png" width="50%">
+</p>
+
+
+## Building CI Pipeline with GitHub Actions
+[workflow](https://github.com/jonathannava/DevOps/blob/main/.github/workflows/ci.yaml)
+
+The pipeline will be set up to automatically trigger on every push and pull request to the repository (main). If the tests pass successfully, the pipeline will proceed to build the container for the application.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/7119224/231545311-a0e65255-2788-40a3-85f7-4d98562af4e6.png" width="50%">
+</p>
+RUNS
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/7119224/231545928-eb5b490a-46ce-4314-b8c7-98b108ed30eb.png" width="50%">
+</p>
+
+## Update the node js application using ansible
+The final step of this project involves setting up an Ansible playbook to manage the Docker container running the Node.js application.
+The inventory file was created to establish a local connection with the Docker container, after which the playbook was created using Ansible to make the text change. The SED command was then executed inside the Docker container.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/7119224/231550126-0b708b5a-e671-4e0f-b773-7a74081ef33f.png" width="50%">
+</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/7119224/231547684-8dcb3910-c453-4223-8844-a8ea2f349293.png" width="50%">
+</p>
+
+Overall, this part demonstrates how to automate the process of updating a Node.js application running in a Docker container using Ansible, making it easy to maintain and update the application with minimal manual intervention.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/7119224/231550330-58b91f06-9e62-4d92-863c-e51ba0eee7d1.png" width="50%">
+</p>
+
 ## Features and Requirements
 - Node Js application will be provided
 - Containerization using docker
