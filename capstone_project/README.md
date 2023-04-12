@@ -54,6 +54,9 @@ RUNS
 </p>
 
 ## Update the node js application using ansible
+
+[Playbook Ansible](https://github.com/jonathannava/DevOps/blob/main/capstone_project/hello-world/playbook.yml)
+
 The final step of this project involves setting up an Ansible playbook to manage the Docker container running the Node.js application.
 The inventory file was created to establish a local connection with the Docker container, after which the playbook was created using Ansible to make the text change. The SED command was then executed inside the Docker container.
 
